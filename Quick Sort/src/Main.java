@@ -26,7 +26,7 @@ public class Main {
 
         int s = low;
         int e = hi;
-        int m = low+(hi - low);
+        int m = low+(hi - low)/2;
         int pivot = nums[m];
         while(s<=e){
             while (nums[s]<pivot){
