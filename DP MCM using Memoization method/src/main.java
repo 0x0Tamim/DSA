@@ -30,6 +30,6 @@ public class main {
         dp = new int[n][n];
         for (int[] row : dp) Arrays.fill(row, -1);
 
-        System.out.println("Minimum cost: " + mcm(arr, 1, n - 1));
+        System.out.println("Minimum cost: " + mcm(arr,1, n - 1));
     }
 }
