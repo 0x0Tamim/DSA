@@ -24,6 +24,6 @@ public class Main {
 
     public static void main(String[] args) {
         int[] arr = {10, 20, 30, 40}; // 3 matrices: 10x20, 20x30, 30x40
-        System.out.println("Minimum cost (Tabulation): " + mcmTab(arr));
+        System.out.println("Minimum cost (Tabulation): "+ mcmTab(arr));
     }
 }
