@@ -5,21 +5,15 @@ public class main {
 
     // Matrix Chain Multiplication using recursion + memoization
     static int mcm(int[] arr, int i, int j) {
-        if (i == j) return 0;  // Only one matrix → no multiplication cost
-        if (dp[i][j] != -1) return dp[i][j];
+        if(i==j) return 0;
+        if(dp[i][j] != -1) return dp[i][j];
+        dp[i][j] = Integer.MAX_VALUE;
+        for(int k = i;k<j;k++){
+            int steps = mcm(arr,i,k)+mcm(arr,k+1,j)+(arr[i-1]*arr[k]*arr[j]);
+            dp[i][j] = Math.min(dp[i][j], steps);
 
-        int minCost = Integer.MAX_VALUE;
-
-        // Try every possible split
-        for (int k = i; k < j; k++) {
-            int cost = mcm(arr, i, k)
-                    + mcm(arr, k + 1, j)
-                    + arr[i - 1] * arr[k] * arr[j];
-
-            minCost = Math.min(minCost, cost);
         }
-
-        return dp[i][j] = minCost;
+        return dp[i][j];
     }
 
     public static void main(String[] args) {
@@ -28,8 +22,11 @@ public class main {
         int n = arr.length;
 
         dp = new int[n][n];
-        for (int[] row : dp) Arrays.fill(row, -1);
+        for (int[]row:dp
+             ) {
+            Arrays.fill(row,-1);
 
+        }
         System.out.println("Minimum cost: " + mcm(arr,1, n - 1));
     }
 }
