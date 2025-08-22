@@ -31,6 +31,5 @@ public class Main {
 
         System.out.println("Size of LCS = "+lcsTab(a,b));
 
-
     }
 }
