@@ -9,7 +9,7 @@ public class main {
         if(dp[i][j] != -1) return dp[i][j];
         dp[i][j] = Integer.MAX_VALUE;
         for(int k = i;k<j;k++){
-            int steps = mcm(arr,i,k)+mcm(arr,k+1,j)+(arr[i-1] * arr[k]*arr[j]);
+            int steps = mcm(arr,i,k) + mcm(arr,k+1,j)+(arr[i-1] * arr[k]*arr[j]);
             dp[i][j] = Math.min(dp[i][j], steps);
 
         }
