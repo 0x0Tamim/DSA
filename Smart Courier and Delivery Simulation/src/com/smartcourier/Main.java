@@ -55,7 +55,7 @@ public class Main {
         DeliveryWorkflowService workflowService = new DeliveryWorkflowService(orderRepository, depot);
 
         // Create vehicles for our drivers
-        List<Vehicle> vehicles =new ArrayList<>();
+        List<Vehicle> vehicles = new ArrayList<>();
         vehicles.add(new Vehicle(1, driver1, 25.0)); // 25kg capacity
         vehicles.add(new Vehicle(2, driver2, 30.0)); // 30kg capacity
 
