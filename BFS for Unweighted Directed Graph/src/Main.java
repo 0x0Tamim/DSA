@@ -20,13 +20,13 @@ public class Main {
         }
             System.out.print("Enter starting vertex: ");
             int start = sc.nextInt();
+            boolean[] visited = new boolean[V];
 
-            bfs(graph,start);
+            bfs(graph,start,visited);
 
     }
 
-    static void bfs(ArrayList<ArrayList<Integer>>graph,int start){
-        boolean[] visited = new boolean[graph.size()];
+    static void bfs(ArrayList<ArrayList<Integer>>graph,int start,boolean[]visited){
         Queue<Integer>q = new LinkedList<>();
         q.add(start);
         visited[start] = true;
