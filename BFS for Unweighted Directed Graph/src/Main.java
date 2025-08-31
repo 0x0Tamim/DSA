@@ -12,7 +12,7 @@ public class Main {
 
         System.out.print("Enter number of edges: ");
         int E = sc.nextInt();
-        System.out.println("Enter egdes(u v): ");
+        System.out.println("Enter edges(u v): ");
         for (int i = 0;i<E;i++) {
             int u = sc.nextInt();
             int v = sc.nextInt();
