@@ -11,7 +11,8 @@ public class Main {
 
     static int fib(int n) {
         if(n==0) return 0;
-        if (n == 1) return 1;
+        if (n == 1)
+            return 1;
         int prev1 = 1;
         int prev2 = 0;
         int curr = 0;
